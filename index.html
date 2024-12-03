@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <style>
+        body{
+            background-color: #123;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 400px;
+            height: 500px;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     <h1>calculator</h1>
@@ -11,28 +23,27 @@
         <div class="total">
             <input id="screen" type="text" readonly>
         </div>
-        <button onclick="" id="AC">AC</button>
+        <button onclick="" id="clear">AC</button>
         <button onclick="" id="decimal">,</button>
-        <button onclick="" id="x">❎</button>
-        <button onclick="" id="/">➗</button>
-        <button onclick="" id="7">7</button>
-        <button onclick="" id="8">8</button>
-        <button onclick="" id="9">9</button>
-        <button onclick="" id="multiply">✖</button>
-        <button onclick="" id="4">4</button>
-        <button onclick="" id="5">5</button>
-        <button onclick="" id="6">6</button>
-        <button onclick="" id="subtract">➖</button>
-        <button onclick="" id="1">1</button>
-        <button onclick="" id="2">2</button>
-        <button onclick="" id="3">3</button>
-        <button onclick="" id="sum">➕</button>
+        <button onclick="" id="delete">❎</button>
+        <button onclick="" id="devide">➗</button>
+        <button class="numbers" value="7">7</button>
+        <button class="numbers" value="8" id="eight">8</button>
+        <button class="numbers" value="9" id="nine">9</button>
+        <button class="numbers" value="" id="multiply">✖</button>
+        <button class="numbers" value="4" id="four">4</button>
+        <button class="numbers" value="5" id="five">5</button>
+        <button class="numbers" value="6" id="six">6</button>
+        <button class="numbers" value="" id="subtract">➖</button>
+        <button class="numbers" value="1" id="one">1</button>
+        <button class="numbers" value="2" id="two">2</button>
+        <button class="numbers" value="3" id="three">3</button>
+        <button class="numbers" value="+">➕</button>
         <button onclick="" id="equal">=</button>
-        <button onclick="" id="zero">0</button>
-        
+        <button class="numbers" id="0">0</button>
     </div>
 
-    <script src="calculate.js">
+    <script src="main.js">
     </script>
 </body>
 </html>
