@@ -9,38 +9,83 @@
             background-color: #123;
             margin: 0;
             padding: 0;
+        }h1{
+            display: flex;
+            justify-content: center;
+            color: #ddd;
         }
         .container{
             width: 400px;
-            height: 500px;
+            height: 400px;
             justify-content: center;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr 1fr  1fr 1fr 1fr;
+            gap: 10px;
+        }
+        #equal{
+            grid-column: span 3;
+        }
+        #zero{
+            grid-column: span 1;
+        }
+        .total{
+            grid-column: span 4;
+            width: 400px;
+            height: 90px;
+            background-color: aqua;
+        }
+        .total input {
+            width: 100%; /* Take up full width of the container */
+            height: 90px; /* Set height for the input */
+            text-align: right; /* Right-align text */
+            font-size: 2rem; /* Increase font size for readability */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%; /* Buttons take up the full width of their cell */
+            height: 100%; /* Buttons take up full height of the grid cell */
+            font-size: 1.5rem; /* Increase button font size */
+            background-color: #ddd; /* Light background color for buttons */
+            border: none;
+            border-radius: 8px; /* Rounded corners for buttons */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        button:active {
+            background-color: #ccc; /* Darken button on click */
         }
     </style>
 </head>
 <body>
-    <h1>calculator</h1>
+    <h1 style="color:beige">Calculator</h1>
     <div class="container">
         <div class="total">
             <input id="screen" type="text" readonly>
         </div>
-        <button onclick="" id="clear">AC</button>
-        <button onclick="" id="decimal">,</button>
-        <button onclick="" id="delete">❎</button>
-        <button onclick="" id="devide">➗</button>
+        <button  id="clear">AC</button>
+        <button  id="decimal">.</button>
+        <button  id="deleteB">❎</button>
+        <button class="opreation" value="➗"id="devide">➗</button>
         <button class="numbers" value="7">7</button>
         <button class="numbers" value="8" id="eight">8</button>
         <button class="numbers" value="9" id="nine">9</button>
-        <button class="numbers" value="" id="multiply">✖</button>
+        <button class="opreation" value="✖" id="multiply">✖</button>
         <button class="numbers" value="4" id="four">4</button>
         <button class="numbers" value="5" id="five">5</button>
         <button class="numbers" value="6" id="six">6</button>
-        <button class="numbers" value="" id="subtract">➖</button>
+        <button class="opreation" value="➖" id="subtract">➖</button>
         <button class="numbers" value="1" id="one">1</button>
         <button class="numbers" value="2" id="two">2</button>
         <button class="numbers" value="3" id="three">3</button>
-        <button class="numbers" value="+">➕</button>
+        <button class="opreation" value="➕" id="sum">➕</button>
+        <button class="numbers" value="0" id="zero">0</button>
         <button onclick="" id="equal">=</button>
-        <button class="numbers" id="0">0</button>
     </div>
 
     <script src="main.js">
